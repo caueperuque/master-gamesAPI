@@ -7,7 +7,7 @@ public class TrybeGamesController
 
     public IConsole Console;
 
-    public int _nextId;
+    public int _nextPlayerId;
 
     public TrybeGamesController(TrybeGamesDatabase database, IConsole console)
     {
@@ -123,11 +123,12 @@ public class TrybeGamesController
     public void AddPlayer()
     {
         // implementar
-        _nextId++;
+        _nextPlayerId = database.Players.Count() + 1;
+
         Console.WriteLine("Nome do player: ");
         var playerName = Console.ReadLine();
 
-        Player setPlayer = new Player { Id = _nextId, Name = playerName };
+        Player setPlayer = new Player { Id = _nextPlayerId, Name = playerName };
         database.Players.Add(setPlayer);
         Console.WriteLine("Pessoa jogadora adicionada com sucesso!");
     }
