@@ -59,8 +59,17 @@ public class TrybeGamesDatabase
     // 8. Crie a funcionalidade de buscar todos os diferentes Tipos de jogos dentre os jogos cadastrados
     public List<GameType> GetGameTypes()
     {
-        // Implementar
-        throw new NotImplementedException();
+        var queryGamesTypes = from game in Games
+                            group game by game.GameType into games
+                            select games;
+        
+        List<GameType> gamesTypes = new List<GameType>();
+        foreach(var game in queryGamesTypes)
+        {
+            gamesTypes.Add(game.Key);
+        }
+
+        return gamesTypes;  
     }
 
     // 9. Crie a funcionalidade de buscar todos os estúdios de jogos junto dos seus jogos desenvolvidos com suas pessoas jogadoras
