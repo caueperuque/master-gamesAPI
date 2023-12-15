@@ -1,6 +1,6 @@
 # MasterGames API 👾
 
-Este projeto é uma API em desenvolvimento para manipular coleções existentes em um sistema de jogos. Ele oferece funcionalidades para interagir com entidades como jogos (Game), jogadores (Player) e estúdios de jogos (GameStudio).
+Este projeto é uma API desenvolvida para manipular coleções existentes em um sistema de jogos. Ele oferece funcionalidades para interagir com entidades como jogos (Game), jogadores (Player) e estúdios de jogos (GameStudio).
 
 ## Estrutura de Diretórios 📁
 
